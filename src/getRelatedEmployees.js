@@ -6,11 +6,9 @@ let employeed;
 function isManager(id) {
   // seu código aqui
   employeed = data.employees.find((employee) => employee.id === id);
-  console.log(employeed);
   if (employeed.managers.length <= 1) {
     return true;
   }
-  console.log(false);
   return false;
 }
 
@@ -24,7 +22,5 @@ function getRelatedEmployees(managerId) {
 
   return colaborators.map((col) => `${col.firstName} ${col.lastName}`);
 }
-
-console.log(getRelatedEmployees('0e7b460e-acf4-4e17-bcb3-ee472265db83'));
 
 module.exports = { isManager, getRelatedEmployees };
