@@ -6,10 +6,7 @@ function getSpeciesByIds(...ids) {
     return [];
   }
 
-  const species = data.species.filter((specie) => {
-    console.log(ids.includes(specie.id));
-    return ids.includes(specie.id);
-  });
+  const species = data.species.filter((specie) => ids.includes(specie.id));
 
   return species;
 }
