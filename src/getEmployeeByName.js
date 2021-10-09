@@ -6,8 +6,8 @@ function getEmployeeByName(employeeName) {
     return {};
   }
 
-  const caseFirstName = data.employees.filter((employee) => employee.firstName === employeeName)[0];
-  const caseLastName = data.employees.filter((employee) => employee.lastName === employeeName)[0];
+  const caseFirstName = data.employees.find((employee) => employee.firstName === employeeName);
+  const caseLastName = data.employees.find((employee) => employee.lastName === employeeName);
 
   if (typeof caseFirstName === 'object') {
     return caseFirstName;
