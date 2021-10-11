@@ -80,5 +80,4 @@ function getSchedule(scheduleTarget) {
   return withParams(scheduleTarget);
 }
 
-console.log(getSchedule('Tuesday'));
 module.exports = getSchedule;
